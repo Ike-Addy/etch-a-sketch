@@ -15,15 +15,21 @@
                 <div class="board">                    
                 </div>
                 <div class="buttons">
-                    <button>Black</button>
-                    <button>Eraser</button>
-                    <button>Random</button>
-                    <button>Reset</button>
+                    <button class="defaultBtn">Black</button>
+                    <button class="eraserBtn">Eraser</button>
+                    <button class="randomBtn">Random</button>
+                    <button class="resetBtn">Reset</button>
                 </div>
             </div>
             <div>
-                <input type="text" placeholder="Size of Board" value="" onchange="changeSize(this.value)" />
-                <button>Set Size</button>
+                <input 
+                id="userSizeInput" 
+                type="text" 
+                placeholder="Size of Board" 
+                value="" 
+                onchange="changeSize(this.value)" 
+                />
+                <button class="sizeBtn">Set Size</button>
             </div>
         </div>
     </body>

@@ -1,9 +1,10 @@
-const resetButton = document.querySelector('button');
 const board = document.querySelector('.board');
+const resetBtn = document.getElementsByClassName('.resetBtn');
+// const sizeBtn = document.getElementsByClassName('.sizeBtn');
 
-// Number of grid rows/ boxes to be generated >> Must set to the value of size of board PH
-const sizeOfGrid = 20;
-
+// Number of grid rows/ boxes to be generated >> 
+// Must set to the value to user's input 
+const sizeOfGrid = 16;
 // Function to create grid
 const createGrid = (grids) => {
     for(let i = 0; i < grids; i++) {
@@ -32,3 +33,19 @@ const createGrid = (grids) => {
 }
 
 createGrid(sizeOfGrid);
+
+
+// const input = document.getElementById('userSizeInput');
+// Change the size of the grid based on the user's input
+function changeSize(input) {
+    if (input >= 2 && input <= 100) {       
+        createGrid(input);
+    } else {
+        alert('Please select a number between 0 and 101');
+    }
+}
+
+
+
+
+
