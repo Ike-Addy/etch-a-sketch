@@ -1,5 +1,12 @@
 const createGrid = document.getElementById('create-grid');
+const gridContainer = document.getElementById('grid-container');
+const clearGrid = document.getElementById('clear-grid');
+let cells = []; // Array to store created cells
+
 createGrid.addEventListener('click', () => {
+    cells = [];
+    gridContainer.innerHTML = '';
+
     for (let i = 0; i < 16 * 16; i++) {
         const cell = document.createElement('div');
         cell.className = 'grid';
@@ -8,13 +15,15 @@ createGrid.addEventListener('click', () => {
         cell.style.border = '0.5px solid black'
         
         gridContainer.appendChild(cell);
+        cells.push(cell);
     }
 })
 
-// const clearGrid = document.getElementById('clear-grid');
-// clearGrid.addEventListener('click', () => {
-//     alert(clearGrid.id)
-// })
+clearGrid.addEventListener('click', () => {
+    cells = [];
+    gridContainer.innerHTML = '';
+})
 
-const gridContainer = document.getElementById('grid-container');
+
+
 
